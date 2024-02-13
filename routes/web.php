@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('pages.landing-page.home.index', ["title" => "Home"]);
 });
+
+Route::get('/login', function () {
+    return view('pages.auth.login.index', ["title" => "Login"]);
+});
+
+Route::get('/register', function () {
+    return view('pages.auth.register.index', ["title" => "Register"]);
+});

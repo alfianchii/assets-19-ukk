@@ -7,7 +7,7 @@
 
 @section('content')
     {{-- Cover --}}
-    <section>
+    <section class="hidden xl:block">
         <div class="absolute right-0 -top-[7%] drop-shadow-2xl">
             <svg width="674" height="713" viewBox="0 0 674 713" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -23,26 +23,28 @@
     </section>
 
     {{-- Hero --}}
-    <div class="grid grid-cols-2">
+    <div class="grid grid-cols-1 xl:grid-cols-2">
         {{-- Content --}}
         <div>
-            <h1 class="font-extrabold leading-[98px] leadi text-midnight-blue text-7xl">Search & review your <span
-                    class="underline text-dodger-blue">fav book</span>
-                effortlessly</h1>
-            <p class="w-3/4 mt-10 leading-8 text-slate-grey">Embark on a literary journey like never before with our
+            <h1 class="text-3xl font-extrabold xl:leading-[98px] xl:text-7xl text-center xl:text-start text-midnight-blue">
+                Search & review
+                your <span class="underline text-dodger-blue">fav book</span> easily</h1>
+            <p class="mt-10 leading-8 text-center xl:text-start xl:w-3/4 text-slate-grey">Embark on a literary journey like
+                never before
+                with our
                 revolutionary
                 library application! Introducing a seamless experience
                 that transcends traditional boundaries, where you
                 can effortlessly search your favorite books.✨</p>
-            <div class="mt-16">
+            <div class="flex justify-center mt-16 xl:block">
                 <a href="{{ auth()->check() ? '/dashboard' : '/login' }}"
-                    class="px-12 py-5 font-bold text-white transition-all duration-300 rounded-lg drop-shadow-2xl hover:bg-blue-700 hover:drop-shadow-none bg-dodger-blue">Start
+                    class="px-12 py-5 font-bold text-white transition-all duration-300 rounded-xl drop-shadow-2xl hover:bg-blue-700 hover:drop-shadow-none bg-dodger-blue">Start
                     now →</a>
             </div>
         </div>
 
         {{-- Books --}}
-        <div class="relative">
+        <div class="relative hidden xl:block">
             <div class="absolute left-0 top-48">
                 <img class="rounded-lg drop-shadow-2xl" src="{{ asset('assets/images/Dompet Ayah Sepatu Ibu.png') }}"
                     alt="Dompet Ayah Sepatu Ibu">
@@ -65,12 +67,12 @@
     {{-- Feature --}}
     <div class="relative mt-44">
         <div id="features" class="absolute left-0 p-6 -top-32 pb-[100px] bg-transparent"></div>
-        <h3 class="text-lg font-bold tracking-widest text-dodger-blue">FEATURES</h3>
-        <h2 class="mt-5 text-5xl font-extrabold tracking-wide text-midnight-blue">🤔• What You Can Do?</h2>
+        <h3 class="text-base font-bold tracking-widest lg:text-lg text-dodger-blue">FEATURES</h3>
+        <h2 class="mt-5 text-3xl font-extrabold tracking-wide lg:text-5xl text-midnight-blue">🤔• What You Can Do?</h2>
     </div>
 
-    <div class="mt-[90px] flex items-center justify-between">
-        <div class="flex flex-col items-center justify-center w-1/4">
+    <div class="mt-[90px] flex flex-col lg:flex-row items-center justify-between text-center">
+        <div class="flex flex-col items-center justify-center mb-20 lg:w-1/4 lg:mb-0">
             <div class="flex mb-7">
                 <div class="p-6 drop-shadow-2xl rounded-3xl bg-dodger-blue">
                     <svg width="45" height="45" viewBox="0 0 45 45" fill="none"
@@ -92,7 +94,7 @@
                 </p>
             </div>
         </div>
-        <div class="flex flex-col items-center justify-center w-1/4">
+        <div class="flex flex-col items-center justify-center mb-20 lg:w-1/4 lg:mb-0">
             <div class="flex mb-7">
                 <div class="p-6 drop-shadow-2xl rounded-3xl bg-dodger-blue">
                     <svg width="45" height="45" viewBox="0 0 45 45" fill="none"
@@ -112,7 +114,7 @@
                 </p>
             </div>
         </div>
-        <div class="flex flex-col items-center justify-center w-1/4">
+        <div class="flex flex-col items-center justify-center mb-20 lg:w-1/4 lg:mb-0">
             <div class="flex mb-7">
                 <div class="p-6 drop-shadow-2xl rounded-3xl bg-dodger-blue">
                     <svg width="45" height="45" viewBox="0 0 45 45" fill="none"
@@ -144,16 +146,16 @@
     {{-- Service --}}
     <div class="relative mt-[200px]">
         <div id="services" class="absolute left-0 p-6 -top-32 pb-[100px] bg-transparent"></div>
-        <h3 class="text-lg font-bold tracking-widest text-dodger-blue">SERVICES</h3>
-        <h2 class="mt-5 text-5xl font-extrabold tracking-wide text-midnight-blue">🚀• The Services for You</h2>
+        <h3 class="text-base font-bold tracking-widest lg:text-lg text-dodger-blue">SERVICES</h3>
+        <h2 class="mt-5 text-3xl font-extrabold tracking-wide lg:text-5xl text-midnight-blue">🚀• The Services for You</h2>
     </div>
 
-    <div class="mt-[90px] grid grid-cols-2">
-        <div class="flex flex-col items-center justify-center drop-shadow-2xl">
+    <div class="mt-[90px] grid grid-cols-1 lg:grid-cols-2">
+        <div class="flex flex-col items-center justify-center order-first mb-12 lg:mb-0 drop-shadow-2xl">
             <img class="rounded-lg" src="{{ asset('assets/images/Service.png') }}" alt="Service">
         </div>
 
-        <div class="ps-[150px] text-end">
+        <div class="lg:ps-[150px] text-center lg:text-end order-last">
             <h4 class="text-[32px] font-medium text-midnight-blue"><span class="text-dodger-blue">Rent</span> your
                 favorite book fairly easy on <span class="text-dodger-blue">Lidia</span>!</h4>
             <p class="mt-10 leading-8 text-slate-grey">Viewing, rent, and organize your favorite books has
@@ -163,8 +165,8 @@
         </div>
     </div>
 
-    <div class="mt-[140px] grid grid-cols-2">
-        <div class="pe-[150px] text-start">
+    <div class="mt-[140px] grid grid-cols-1 lg:grid-cols-2">
+        <div class="lg:pe-[150px] text-center lg:text-start order-last lg:order-first">
             <h4 class="text-[32px] font-medium text-midnight-blue">Quick Book Rentals: <span
                     class="text-dodger-blue">Dive</span> into <span class="text-dodger-blue">Reading</span>
                 Instantly
@@ -175,7 +177,7 @@
                 just a click away!</p>
         </div>
 
-        <div class="flex flex-col items-center justify-center drop-shadow-2xl">
+        <div class="flex flex-col items-center justify-center order-first mb-12 lg:order-last drop-shadow-2xl lg:mb-0">
             <img class="rounded-lg" src="{{ asset('assets/images/Reading.png') }}" alt="Service">
         </div>
     </div>
@@ -183,13 +185,13 @@
     {{-- Review --}}
     <div class="relative mt-[200px]">
         <div id="reviews" class="absolute left-0 p-6 -top-32 pb-[100px] bg-transparent"></div>
-        <h3 class="text-lg font-bold tracking-widest text-dodger-blue">REVIEWS</h3>
-        <h2 class="mt-5 text-5xl font-extrabold tracking-wide text-midnight-blue">💬• Reviews of Others</h2>
+        <h3 class="text-base font-bold tracking-widest lg:text-lg text-dodger-blue">REVIEWS</h3>
+        <h2 class="mt-5 text-3xl font-extrabold tracking-wide lg:text-5xl text-midnight-blue">💬• Reviews of Others</h2>
     </div>
 
-    <div class="mt-[90px] flex items-center gap-x-14">
+    <div class="mt-[90px] lg:flex lg:items-center space-y-16 lg:space-y-0 lg:gap-x-14">
         <div
-            class="flex flex-col items-center justify-center flex-1 w-1/4 p-10 transition-all duration-300 bg-white border rounded-lg shadow-xl hover:shadow-none border-pale-silver">
+            class="flex flex-col items-center justify-center flex-1 p-10 transition-all duration-300 bg-white border rounded-lg shadow-xl lg:w-1/4 hover:shadow-none border-pale-silver">
             <div class="flex mb-4">
                 <div class="p-6 rounded-3xl">
                     <img src="{{ asset('assets/images/Ahmad Saugi.png') }}" alt="Ahmad Saugi">
@@ -210,7 +212,7 @@
             </div>
         </div>
         <div
-            class="flex flex-col items-center justify-center flex-1 w-1/4 p-10 transition-all duration-300 bg-white border rounded-lg shadow-xl hover:shadow-none border-pale-silver">
+            class="flex flex-col items-center justify-center flex-1 p-10 transition-all duration-300 bg-white border rounded-lg shadow-xl lg:w-1/4 hover:shadow-none border-pale-silver">
             <div class="flex mb-4">
                 <div class="p-6 rounded-3xl">
                     <img src="{{ asset('assets/images/Muhammad Alfian.png') }}" alt="Muhammad Alfian">
@@ -229,7 +231,7 @@
             </div>
         </div>
         <div
-            class="flex flex-col items-center justify-center flex-1 w-1/4 p-10 transition-all duration-300 bg-white border rounded-lg shadow-xl hover:shadow-none border-pale-silver">
+            class="flex flex-col items-center justify-center flex-1 p-10 transition-all duration-300 bg-white border rounded-lg shadow-xl lg:w-1/4 hover:shadow-none border-pale-silver">
             <div class="flex mb-4">
                 <div class="p-6 rounded-3xl">
                     <img src="{{ asset('assets/images/Wahyu Amirulloh.png') }}" alt="Wahyu Amirulloh">
@@ -252,8 +254,8 @@
     {{-- Location --}}
     <div class="relative mt-[200px]">
         <div id="location" class="absolute left-0 p-6 -top-32 pb-[100px] bg-transparent"></div>
-        <h3 class="text-lg font-bold tracking-widest text-dodger-blue">LOCATION</h3>
-        <h2 class="mt-5 text-5xl font-extrabold tracking-wide text-midnight-blue">🗺• Our Library Location</h2>
+        <h3 class="text-base font-bold tracking-widest lg:text-lg text-dodger-blue">LOCATION</h3>
+        <h2 class="mt-5 text-3xl font-extrabold tracking-wide lg:text-5xl text-midnight-blue">🗺• Our Library Location</h2>
     </div>
 
     <div class="mt-[90px] flex items-center gap-x-14">

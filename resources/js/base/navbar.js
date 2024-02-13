@@ -1,28 +1,92 @@
 const navbar = document.body.querySelector("#navbar");
+const navbarLogin = document.body.querySelector("#navbar-button-login");
 const navbarMenu = document.body.querySelector("#navbar-menu");
-const navbarLogoText = document.body.querySelector("#navbar-logo-text");
-
-const scroll = () =>
-    navbarChangeBehaviour(window.scrollY, navbar, navbarMenu, navbarLogoText);
-
-const navbarChangeOnDown = (nav, menu, logoText) => {
-    nav.classList.add("backdrop-blur-lg");
-    nav.classList.replace("bg-transparent", "bg-dodger-blue/70");
-    menu.classList.replace("text-battleship-grey", "text-white");
-    logoText.classList.replace("text-black", "text-white");
+const btnHumberger = document.body.querySelector("#button-humberger");
+const navbarLinks = document.body.querySelectorAll(".navbar-link");
+const humbergerClassList = [
+    "absolute",
+    "transition-all",
+    "duration-300",
+    "h-screen",
+    "w-screen",
+    "bg-white/40",
+    "backdrop-blur-xl",
+    "top-[80px]",
+    "left-0",
+    "flex-col",
+    "text-start",
+    "space-y-6",
+    "px-8",
+    "pt-4",
+];
+const breakpoints = {
+    sm: 640,
+    md: 768,
+    lg: 1024,
+    xl: 1280,
 };
 
-const navbarChangeOnUp = (nav, menu, logoText) => {
-    nav.classList.remove("backdrop-blur-lg");
-    nav.classList.replace("bg-dodger-blue/70", "bg-transparent");
-    menu.classList.replace("text-white", "text-battleship-grey");
-    logoText.classList.replace("text-white", "text-black");
+const scroll = () => navbarChangeBehaviour(navbar, navbarLogin);
+const navbarChangeOnDown = (nav, navLogin) => {
+    // Navbar
+    nav.classList.add("backdrop-blur-lg", "drop-shadow-lg");
+    nav.classList.replace("bg-transparent", "bg-white/40");
+
+    // Button
+    changeNavbarLoginToBlue(navLogin);
+};
+const navbarChangeOnUp = (nav, navLogin) => {
+    // Navbar
+    nav.classList.remove("backdrop-blur-lg", "drop-shadow-lg");
+    nav.classList.replace("bg-white/40", "bg-transparent");
+
+    // Button
+    loginButtonChangeBehaviour(navLogin);
+};
+const navbarChangeBehaviour = (nav, navLogin) => {
+    if (window.scrollY > 100) navbarChangeOnDown(nav, navLogin);
+    else navbarChangeOnUp(nav, navLogin);
+};
+const changeNavbarLoginToBlue = (el, isBlue = true) => {
+    if (isBlue) {
+        el.classList.replace("lg:bg-white", "bg-dodger-blue");
+        el.classList.replace("lg:text-midnight-blue", "text-white");
+    } else {
+        el.classList.replace("bg-dodger-blue", "lg:bg-white");
+        el.classList.replace("text-white", "lg:text-midnight-blue");
+    }
+};
+const loginButtonChangeBehaviour = (el) => {
+    if (window.innerWidth <= breakpoints.xl) changeNavbarLoginToBlue(el);
+    else changeNavbarLoginToBlue(el, false);
 };
 
-const navbarChangeBehaviour = (calc, nav, navMenu, navLogoText) => {
-    if (calc > 100) navbarChangeOnDown(nav, navMenu, navLogoText);
-    else navbarChangeOnUp(nav, navMenu, nav, navLogoText);
+const showList = () => {
+    if (navbarMenu.classList.contains("opacity-0"))
+        navbarMenu.classList.replace("opacity-0", "opacity-100");
+    else navbarMenu.classList.replace("opacity-100", "opacity-0");
+    navbarMenu.classList.add(...humbergerClassList, "pointer-events-auto");
+    navbarMenu.classList.remove("pointer-events-none");
+};
+
+const closeList = () => {
+    if (window.innerWidth >= breakpoints.md) {
+        if (navbarMenu.classList.contains("opacity-100"))
+            navbarMenu.classList.replace("opacity-100", "opacity-0");
+        navbarMenu.classList.remove(
+            ...humbergerClassList,
+            "pointer-events-auto",
+        );
+        navbarMenu.classList.add("pointer-events-none");
+
+        // Change its navbar behaviour
+        navbarChangeBehaviour(navbar, navbarLogin);
+    } else {
+        changeNavbarLoginToBlue(navbarLogin);
+    }
 };
 
 scroll();
 window.onscroll = () => scroll();
+window.onresize = () => closeList();
+btnHumberger.addEventListener("click", showList);
