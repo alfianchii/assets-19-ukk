@@ -1,9 +1,9 @@
 <h1 align="center">Welcome to Lidia! 👋</h1>
 
-![Landing Page](https://github.com/alfianchii/assets-35-ukk/blob/main/public/assets/lidia-welcome.png?raw=true)
+![Landing Page](https://github.com/alfianchii/assets-19-ukk/blob/main/public/assets/lidia-welcome.png?raw=true)
 
-[![All Contributors](https://img.shields.io/github/contributors/alfianchii/assets-35-ukk)](https://github.com/alfianchii/assets-35-ukk/graphs/contributors)
-![GitHub last commit](https://img.shields.io/github/last-commit/alfianchii/assets-35-ukk)
+[![All Contributors](https://img.shields.io/github/contributors/alfianchii/assets-19-ukk)](https://github.com/alfianchii/assets-19-ukk/graphs/contributors)
+![GitHub last commit](https://img.shields.io/github/last-commit/alfianchii/assets-19-ukk)
 
 ---
 
@@ -85,8 +85,8 @@ Library digital application with a modern and clean layout, this page features a
 1. Clone repository
 
 ```bash
-git clone https://github.com/alfianchii/assets-35-ukk
-cd assets-35-ukk
+git clone https://github.com/alfianchii/assets-19-ukk
+cd assets-19-ukk
 composer install
 npm install
 cp .env.example .env
@@ -122,8 +122,8 @@ php artisan serve
 -   Clone the repository:
 
 ```bash
-git clone https://github.com/alfianchii/assets-35-ukk
-cd assets-35-ukk
+git clone https://github.com/alfianchii/assets-19-ukk
+cd assets-19-ukk
 ```
 
 -   Copy `.env.example` file with `cp .env.example .env` and configure database:
