@@ -5,24 +5,26 @@
                 <a href="/" class="flex items-center max-h-full me-28">
                     <img class="h-10" src="{{ asset('assets/logo/high-resolutions/logo-rounded.png') }}" alt="logo">
                     <span id="navbar-logo-text"
-                        class="text-lg font-bold text-black transition-all duration-300 ms-4">{{ config('app.name') }}</span>
+                        class="text-lg font-bold text-black transition-all duration-300 ms-4">Lidia</span>
                 </a>
 
-                <ul id="navbar-menu"
-                    class="flex opacity-0 pointer-events-none md:pointer-events-auto md:opacity-100 gap-x-10 text-battleship-grey">
-                    <li class="text-base font-medium transition-all duration-300 md:text-sm hover:text-royal-blue">
-                        <a href="/#features">Feature</a>
-                    </li>
-                    <li class="text-base font-medium transition-all duration-300 md:text-sm hover:text-royal-blue">
-                        <a href="/#services">Service</a>
-                    </li>
-                    <li class="text-base font-medium transition-all duration-300 md:text-sm hover:text-royal-blue">
-                        <a href="/#reviews">Review</a>
-                    </li>
-                    <li class="text-base font-medium transition-all duration-300 md:text-sm hover:text-royal-blue">
-                        <a href="/#location">Location</a>
-                    </li>
-                </ul>
+                <div id="navbar-menu"
+                    class="absolute top-[80px] right-[2000px] hidden opacity-0 md:static md:block md:opacity-100">
+                    <ul class="flex flex-col md:flex-row gap-y-6 md:gap-y-0 md:gap-x-10 text-battleship-grey">
+                        <li class="text-base font-medium transition-all duration-300 md:text-sm hover:text-royal-blue">
+                            <a href="/#features">Feature</a>
+                        </li>
+                        <li class="text-base font-medium transition-all duration-300 md:text-sm hover:text-royal-blue">
+                            <a href="/#services">Service</a>
+                        </li>
+                        <li class="text-base font-medium transition-all duration-300 md:text-sm hover:text-royal-blue">
+                            <a href="/#reviews">Review</a>
+                        </li>
+                        <li class="text-base font-medium transition-all duration-300 md:text-sm hover:text-royal-blue">
+                            <a href="/#location">Location</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
             <div class="flex items-center justify-end w-1/2">

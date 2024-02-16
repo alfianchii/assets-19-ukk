@@ -3,6 +3,7 @@
 @section('title', $title)
 
 @section('additional_links')
+    @include('utils.filepond.link')
 @endsection
 
 @section('content')
@@ -48,7 +49,7 @@
                 </div>
 
                 {{-- Form --}}
-                <form action="/register" method="POST" class="mt-8">
+                <form action="/register" method="POST" class="mt-8" enctype="multipart/form-data">
                     @csrf
 
                     {{-- Session --}}
@@ -115,7 +116,7 @@
                         </div>
                         <div class="mb-5">
                             <label for="nik" class="block mb-2 text-sm font-bold text-midnight-blue">NIK</label>
-                            <input type="text" id="nik" placeholder="e.g. 1050241708900001"
+                            <input type="number" id="nik" placeholder="e.g. 1050241708900001"
                                 class="bg-gray-50 border border-gray-300 text-slate-grey text-sm rounded-md transition-all duration-300 outline-none focus:ring-royal-blue focus:border-royalring-royal-blue block w-full p-2.5"
                                 name="nik" value="{{ old('nik') }}" maxlength="16">
 
@@ -234,6 +235,20 @@
                         </div>
                     </div>
 
+                    <div class="grid grid-cols-1">
+                        <div>
+                            <label for="profile_picture" class="block mb-2 text-sm font-bold text-midnight-blue">Profile
+                                Picture</label>
+
+                            <input type="file" class="image-crop-filepond" name="profile_picture"
+                                id="profile_picture" />
+
+                            @error('profile_picture')
+                                <p class="-mt-2 text-xs text-red-500">Error message</p>
+                            @enderror
+                        </div>
+                    </div>
+
                     <div class="mt-7">
                         <button
                             class="w-full py-3 text-sm font-bold text-white transition-all duration-300 rounded hover:bg-blue-700 bg-dodger-blue"
@@ -253,4 +268,6 @@
 @endsection
 
 @section('additional_scripts')
+    @include('utils.filepond.script')
+    @vite('resources/js/components/filepond/image-crop/photo.js')
 @endsection

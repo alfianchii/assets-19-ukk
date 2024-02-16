@@ -13,9 +13,6 @@ const humbergerClassList = [
     "backdrop-blur-xl",
     "top-[80px]",
     "left-0",
-    "flex-col",
-    "text-start",
-    "space-y-6",
     "px-8",
     "pt-4",
 ];
@@ -65,19 +62,16 @@ const showList = () => {
     if (navbarMenu.classList.contains("opacity-0"))
         navbarMenu.classList.replace("opacity-0", "opacity-100");
     else navbarMenu.classList.replace("opacity-100", "opacity-0");
-    navbarMenu.classList.add(...humbergerClassList, "pointer-events-auto");
-    navbarMenu.classList.remove("pointer-events-none");
+    navbarMenu.classList.add(...humbergerClassList, "block");
+    navbarMenu.classList.toggle("hidden");
 };
 
 const closeList = () => {
     if (window.innerWidth >= breakpoints.md) {
         if (navbarMenu.classList.contains("opacity-100"))
             navbarMenu.classList.replace("opacity-100", "opacity-0");
-        navbarMenu.classList.remove(
-            ...humbergerClassList,
-            "pointer-events-auto",
-        );
-        navbarMenu.classList.add("pointer-events-none");
+        navbarMenu.classList.remove(...humbergerClassList, "block");
+        navbarMenu.classList.add("hidden");
 
         // Change its navbar behaviour
         navbarChangeBehaviour(navbar, navbarLogin);
