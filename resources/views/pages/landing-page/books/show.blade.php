@@ -173,7 +173,7 @@
                             <h3
                                 class="mb-2 text-base font-semibold text-center transition-all duration-300 lg:text-start text-midnight-blue hover:text-midnight-blue/60">
                                 Nugraha</h3>
-                            <p class="text-sm text-slate-grey">{{ now()->diffForHumans() }}</p>
+                            <p class="text-sm text-center lg:text-start text-slate-grey">{{ now()->diffForHumans() }}</p>
 
                             <p class="mt-5 text-slate-grey">"Dompet Ayah Sepatu Ibu" is a thought-provoking puzzle that
                                 keeps
@@ -200,7 +200,7 @@
                             <h3
                                 class="mb-2 text-base font-semibold text-center transition-all duration-300 lg:text-start text-midnight-blue hover:text-midnight-blue/60">
                                 Moepoi</h3>
-                            <p class="text-sm text-slate-grey">{{ now()->diffForHumans() }}</p>
+                            <p class="text-sm text-center lg:text-start text-slate-grey">{{ now()->diffForHumans() }}</p>
 
                             <p class="mt-5 text-slate-grey">While "Dompet Ayah Sepatu Ibu" promises an intriguing
                                 exploration of time and eternity, its execution falls short. The plot is convoluted, with
@@ -227,7 +227,7 @@
                             <h3
                                 class="mb-2 text-base font-semibold text-center transition-all duration-300 lg:text-start text-midnight-blue hover:text-midnight-blue/60">
                                 Ogi</h3>
-                            <p class="text-sm text-slate-grey">{{ now()->diffForHumans() }}</p>
+                            <p class="text-sm text-center lg:text-start text-slate-grey">{{ now()->diffForHumans() }}</p>
 
                             <p class="mt-5 text-slate-grey">Prepare to have your mind blown by "Dompet Ayah Sepatu Ibu".
                                 This book seamlessly blends elements of science fiction, fantasy, and metaphysics to create
