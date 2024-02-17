@@ -11,18 +11,37 @@
                 <div id="navbar-menu"
                     class="absolute top-[80px] right-[2000px] hidden opacity-0 md:static md:block md:opacity-100">
                     <ul class="flex flex-col md:flex-row gap-y-6 md:gap-y-0 md:gap-x-10 text-battleship-grey">
-                        <li class="text-base font-medium transition-all duration-300 md:text-sm hover:text-royal-blue">
-                            <a href="/#features">Feature</a>
-                        </li>
-                        <li class="text-base font-medium transition-all duration-300 md:text-sm hover:text-royal-blue">
-                            <a href="/#services">Service</a>
-                        </li>
-                        <li class="text-base font-medium transition-all duration-300 md:text-sm hover:text-royal-blue">
-                            <a href="/#reviews">Review</a>
-                        </li>
-                        <li class="text-base font-medium transition-all duration-300 md:text-sm hover:text-royal-blue">
-                            <a href="/#location">Location</a>
-                        </li>
+                        @auth
+                            <li class="text-base font-medium transition-all duration-300 md:text-sm hover:text-royal-blue">
+                                <a href="/#features">Feature</a>
+                            </li>
+                            <li class="text-base font-medium transition-all duration-300 md:text-sm hover:text-royal-blue">
+                                <a href="/#services">Service</a>
+                            </li>
+                            <li class="text-base font-medium transition-all duration-300 md:text-sm hover:text-royal-blue">
+                                <a href="/#reviews">Review</a>
+                            </li>
+                            <li class="text-base font-medium transition-all duration-300 md:text-sm hover:text-royal-blue">
+                                <a href="/#location">Location</a>
+                            </li>
+                        @else
+                            <li
+                                class="text-base font-medium transition-all duration-300 md:text-sm hover:text-royal-blue @if (Request::is('/')) text-dodger-blue @endif">
+                                <a href="/">Home</a>
+                            </li>
+                            <li
+                                class="text-base font-medium transition-all duration-300 md:text-sm hover:text-royal-blue @if (Request::is('books*')) text-dodger-blue @endif">
+                                <a href="/books">Books</a>
+                            </li>
+                            <li
+                                class="text-base font-medium transition-all duration-300 md:text-sm hover:text-royal-blue @if (Request::is('genres*')) text-dodger-blue @endif">
+                                <a href="/genres">Genres</a>
+                            </li>
+                            <li
+                                class="text-base font-medium transition-all duration-300 md:text-sm hover:text-royal-blue @if (Request::is('reviews*')) text-dodger-blue @endif">
+                                <a href="/reviews">Reviews</a>
+                            </li>
+                        @endauth
                     </ul>
                 </div>
             </div>
@@ -60,7 +79,7 @@
                 @else
                     <div class="flex items-center">
                         <a id="navbar-button-login" href="/login"
-                            class="px-6 py-2 font-bold text-white transition-all duration-300 rounded-lg lg:px-10 bg-dodger-blue lg:bg-white lg:hover:bg-white/80 lg:text-midnight-blue">
+                            class="px-6 py-2 font-bold text-white transition-all duration-300 rounded-lg lg:px-10 bg-dodger-blue">
                             Login
                         </a>
                     </div>

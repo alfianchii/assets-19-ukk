@@ -1,3 +1,4 @@
+const path = window.location.pathname;
 const navbar = document.body.querySelector("#navbar");
 const navbarLogin = document.body.querySelector("#navbar-button-login");
 const navbarMenu = document.body.querySelector("#navbar-menu");
@@ -54,7 +55,9 @@ const changeNavbarLoginToBlue = (el, isBlue = true) => {
     }
 };
 const loginButtonChangeBehaviour = (el) => {
-    if (window.innerWidth <= breakpoints.xl) changeNavbarLoginToBlue(el);
+    const home = path.length === 1;
+    if (window.innerWidth <= breakpoints.xl || !home)
+        changeNavbarLoginToBlue(el);
     else changeNavbarLoginToBlue(el, false);
 };
 

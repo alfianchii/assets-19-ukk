@@ -25,6 +25,25 @@ Route::get('/register', function () {
     return view('pages.auth.register.index', ["title" => "Register"]);
 });
 
+// Landing Page
+// Book
+Route::get('/books', function () {
+    return view("pages.landing-page.books.index", ["title" => "Books"]);
+});
+Route::get('/books/1', function () {
+    return view("pages.landing-page.books.show", ["title" => "Dompet Ayah Sepatu Ibu"]);
+});
+
+// Genre
+Route::get('/genres', function () {
+    return view("pages.landing-page.genres.index", ["title" => "Genres"]);
+});
+
+// Review
+Route::get('/reviews', function () {
+    return view("pages.landing-page.reviews.index", ["title" => "Reviews"]);
+});
+
 // Dashboard
 Route::group(['prefix' => "dashboard"], function () {
     Route::get('/', function () {
