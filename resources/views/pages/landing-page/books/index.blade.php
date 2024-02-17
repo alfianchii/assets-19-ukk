@@ -11,7 +11,7 @@
         <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
             <li class="inline-flex items-center">
                 <a href="/"
-                    class="inline-flex items-center text-sm font-medium text-gray-700 transition-all duration-300 hover:text-blue-600">
+                    class="inline-flex items-center text-sm font-medium transition-all duration-300 text-midnight-blue hover:text-dodger-blue">
                     <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                         viewBox="0 0 20 20">
                         <path
@@ -61,7 +61,7 @@
                     <div class="relative w-full">
                         <div class="absolute inset-y-0 flex items-center pointer-events-none start-0 ps-3">📑</div>
                         <input type="text" id="simple-search"
-                            class="bg-gray-50 border transition-all duration-300 outline-none border-gray-300 text-slate-grey text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5"
+                            class="border transition-all duration-300 outline-none border-pale-silver text-slate-grey text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5"
                             name="search" placeholder="Search a book ..." value="{{ request('search') }}" required
                             autofocus />
                     </div>

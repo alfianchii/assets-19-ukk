@@ -20,7 +20,7 @@
                     <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
                         <li class="inline-flex items-center">
                             <a href="/"
-                                class="inline-flex items-center text-sm font-medium text-gray-700 transition-all duration-300 hover:text-blue-600">
+                                class="inline-flex items-center text-sm font-medium transition-all duration-300 text-midnight-blue hover:text-dodger-blue">
                                 <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                     fill="currentColor" viewBox="0 0 20 20">
                                     <path
@@ -106,7 +106,7 @@
                             <label for="full_name" class="block mb-2 text-sm font-bold text-midnight-blue">Full
                                 Name</label>
                             <input type="text" id="full_name"
-                                class="bg-gray-50 border border-gray-300 text-slate-grey text-sm rounded-md transition-all duration-300 outline-none focus:ring-royal-blue focus:border-royalring-royal-blue block w-full py-2.5 pe-32"
+                                class="border border-pale-silver text-slate-grey text-sm rounded-md transition-all duration-300 outline-none focus:ring-royal-blue focus:border-royal-blue ring-royal-blue block w-full py-2.5 pe-32"
                                 placeholder="e.g. Muhammad Alfian" name="full_name" value="{{ old('full_name') }}"
                                 autofocus>
 
@@ -117,7 +117,7 @@
                         <div class="mb-5">
                             <label for="nik" class="block mb-2 text-sm font-bold text-midnight-blue">NIK</label>
                             <input type="number" id="nik" placeholder="e.g. 1050241708900001"
-                                class="bg-gray-50 border border-gray-300 text-slate-grey text-sm rounded-md transition-all duration-300 outline-none focus:ring-royal-blue focus:border-royalring-royal-blue block w-full p-2.5"
+                                class="border border-pale-silver text-slate-grey text-sm rounded-md transition-all duration-300 outline-none focus:ring-royal-blue focus:border-royal-blue ring-royal-blue block w-full p-2.5"
                                 name="nik" value="{{ old('nik') }}" maxlength="16">
 
                             @error('nik')
@@ -130,7 +130,7 @@
                         <div class="mb-5">
                             <label for="username" class="block mb-2 text-sm font-bold text-midnight-blue">Username</label>
                             <input type="text" id="username"
-                                class="bg-gray-50 border border-gray-300 text-slate-grey text-sm rounded-md transition-all duration-300 outline-none focus:ring-royal-blue focus:border-royalring-royal-blue block w-full p-2.5"
+                                class="border border-pale-silver text-slate-grey text-sm rounded-md transition-all duration-300 outline-none focus:ring-royal-blue focus:border-royal-blue ring-royal-blue block w-full p-2.5"
                                 placeholder="e.g. alfianchii" name="username" value="{{ old('username') }}">
 
                             @error('username')
@@ -140,7 +140,7 @@
                         <div class="mb-5">
                             <label for="email" class="block mb-2 text-sm font-bold text-midnight-blue">Email</label>
                             <input type="email" id="email" placeholder="e.g. alfian.ganteng@gmail.com"
-                                class="bg-gray-50 border border-gray-300 text-slate-grey text-sm rounded-md transition-all duration-300 outline-none focus:ring-royal-blue focus:border-royalring-royal-blue block w-full p-2.5"
+                                class="border border-pale-silver text-slate-grey text-sm rounded-md transition-all duration-300 outline-none focus:ring-royal-blue focus:border-royal-blue ring-royal-blue block w-full p-2.5"
                                 name="email" value="{{ old('email') }}">
 
                             @error('email')
@@ -153,7 +153,7 @@
                         <div class="mb-5">
                             <label for="phone" class="block mb-2 text-sm font-bold text-midnight-blue">Phone</label>
                             <input type="tel" id="phone"
-                                class="bg-gray-50 border border-gray-300 text-slate-grey text-sm rounded-md transition-all duration-300 outline-none focus:ring-royal-blue focus:border-royalring-royal-blue block w-full p-2.5"
+                                class="border border-pale-silver text-slate-grey text-sm rounded-md transition-all duration-300 outline-none focus:ring-royal-blue focus:border-royal-blue ring-royal-blue block w-full p-2.5"
                                 placeholder="e.g. 082384763478" name="phone" value="{{ old('phone') }}"
                                 maxlength="13">
 
@@ -164,7 +164,7 @@
                         <div class="mb-5">
                             <label for="born" class="block mb-2 text-sm font-bold text-midnight-blue">Born</label>
                             <input type="date" id="born" placeholder="e.g. alfian.ganteng@gmail.com"
-                                class="bg-gray-50 border border-gray-300 text-slate-grey text-sm rounded-md transition-all duration-300 outline-none focus:ring-royal-blue focus:border-royalring-royal-blue block w-full p-2.5"
+                                class="border border-pale-silver text-slate-grey text-sm rounded-md transition-all duration-300 outline-none focus:ring-royal-blue focus:border-royal-blue ring-royal-blue block w-full p-2.5"
                                 name="born" value="{{ old('date') ?? date('Y-m-d') }}">
 
                             @error('born')
@@ -177,7 +177,7 @@
                         <div class="mb-5">
                             <label for="address" class="block mb-2 text-sm font-bold text-midnight-blue">Address</label>
                             <input type="text" id="address"
-                                class="bg-gray-50 border border-gray-300 text-slate-grey text-sm rounded-md transition-all duration-300 outline-none focus:ring-royal-blue focus:border-royalring-royal-blue block w-full p-2.5"
+                                class="border border-pale-silver text-slate-grey text-sm rounded-md transition-all duration-300 outline-none focus:ring-royal-blue focus:border-royal-blue ring-royal-blue block w-full p-2.5"
                                 placeholder="e.g. Jl. Free Fire Factory, No. 1, Kla Only" name="address"
                                 value="{{ old('address') }}">
 
@@ -192,14 +192,14 @@
                                 <div class="flex items-center">
                                     <input @if (old('gender') == 'male') checked @endif id="male" type="radio"
                                         value="male" name="gender"
-                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                        class="w-4 h-4 border-pale-silver text-dodger-blue focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                     <label for="male"
                                         class="text-sm font-medium text-gray-900 ms-2 dark:text-gray-300">Male</label>
                                 </div>
                                 <div class="flex items-center">
                                     <input @if (old('gender') == 'female') checked @endif id="female" type="radio"
                                         value="female" name="gender"
-                                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                        class="w-4 h-4 border-pale-silver text-dodger-blue focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                     <label for="female"
                                         class="text-sm font-medium text-gray-900 ms-2 dark:text-gray-300">Female</label>
                                 </div>
@@ -215,7 +215,7 @@
                         <div class="mb-5">
                             <label for="password" class="block mb-2 text-sm font-bold text-midnight-blue">Password</label>
                             <input type="password" id="password"
-                                class="bg-gray-50 border border-gray-300 text-slate-grey text-sm rounded-md transition-all duration-300 outline-none focus:ring-royal-blue focus:border-royalring-royal-blue block w-full p-2.5"
+                                class="border border-pale-silver text-slate-grey text-sm rounded-md transition-all duration-300 outline-none focus:ring-royal-blue focus:border-royal-blue ring-royal-blue block w-full p-2.5"
                                 placeholder="e.g. 4kuBu7uhM3dk1t" name="password" value="{{ old('password') }}">
 
                             @error('password')
@@ -226,7 +226,7 @@
                             <label for="password_confirmation"
                                 class="block mb-2 text-sm font-bold text-midnight-blue">Password Confirmation</label>
                             <input type="password" id="password_confirmation" placeholder="e.g. 4kuBu7uhM3dk1t"
-                                class="bg-gray-50 border border-gray-300 text-slate-grey text-sm rounded-md transition-all duration-300 outline-none focus:ring-royal-blue focus:border-royalring-royal-blue block w-full p-2.5"
+                                class="border border-pale-silver text-slate-grey text-sm rounded-md transition-all duration-300 outline-none focus:ring-royal-blue focus:border-royal-blue ring-royal-blue block w-full p-2.5"
                                 name="password_confirmation" value="{{ old('password_confirmation') }}">
 
                             @error('password_confirmation')

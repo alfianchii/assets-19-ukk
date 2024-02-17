@@ -23,7 +23,7 @@
                     @if ($paginator->onFirstPage())
                         <li>
                             <a aria-label="{{ __('pagination.previous') }}"
-                                class="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 transition-all duration-300 bg-white border border-gray-300 ms-0 border-e-0 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                class="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 transition-all duration-300 bg-white border border-gray-300 ms-0 border-e-0 rounded-s-lg hover:bg-gray-100 hover:text-midnight-blue dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
                                 <span class="sr-only">Previous</span>
                                 <svg class="w-2.5 h-2.5 rtl:rotate-180" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
@@ -36,7 +36,7 @@
                         <li>
                             <a href="{{ $paginator->previousPageUrl() }}" rel="prev"
                                 aria-label="{{ __('pagination.previous') }}"
-                                class="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 transition-all duration-300 bg-white border border-gray-300 ms-0 border-e-0 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                class="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 transition-all duration-300 bg-white border border-gray-300 ms-0 border-e-0 rounded-s-lg hover:bg-gray-100 hover:text-midnight-blue dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
                                 <span class="sr-only">Previous</span>
                                 <svg class="w-2.5 h-2.5 rtl:rotate-180" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
@@ -54,7 +54,7 @@
                             <li>
                                 <span aria-disabled="true" class="transition-all duration-300">
                                     <span
-                                        class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium leading-5 text-gray-700 transition-all duration-300 bg-white border border-gray-300 cursor-default dark:bg-gray-800 dark:border-gray-600">{{ $element }}</span>
+                                        class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium leading-5 transition-all duration-300 bg-white border border-gray-300 cursor-default text-midnight-blue dark:bg-gray-800 dark:border-gray-600">{{ $element }}</span>
                                 </span>
                             </li>
                         @endif
@@ -65,13 +65,13 @@
                                 @if ($page == $paginator->currentPage())
                                     <li>
                                         <span aria-current="page"
-                                            class="z-10 flex items-center justify-center h-8 px-3 leading-tight text-blue-600 transition-all duration-300 border border-blue-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">{{ $page }}</span>
+                                            class="z-10 flex items-center justify-center h-8 px-3 leading-tight transition-all duration-300 border border-blue-300 text-dodger-blue bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">{{ $page }}</span>
                                     </li>
                                 @else
                                     <li>
                                         <a href="{{ $url }}"
                                             aria-label="{{ __('Go to page :page', ['page' => $page]) }}"
-                                            class="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 transition-all duration-300 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">{{ $page }}</a>
+                                            class="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 transition-all duration-300 bg-white border border-gray-300 hover:bg-gray-100 hover:text-midnight-blue dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">{{ $page }}</a>
                                     </li>
                                 @endif
                             @endforeach
@@ -83,7 +83,7 @@
                         <li>
                             <a href="{{ $paginator->nextPageUrl() }}" rel="next"
                                 aria-label="{{ __('pagination.next') }}"
-                                class="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 transition-all duration-300 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                class="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 transition-all duration-300 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-midnight-blue dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
                                 <span class="sr-only">Next</span>
                                 <svg class="w-2.5 h-2.5 rtl:rotate-180" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
@@ -95,7 +95,7 @@
                     @else
                         <li>
                             <a
-                                class="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 transition-all duration-300 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                class="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 transition-all duration-300 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-midnight-blue dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
                                 <span class="sr-only">Next</span>
                                 <svg class="w-2.5 h-2.5 rtl:rotate-180" aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">

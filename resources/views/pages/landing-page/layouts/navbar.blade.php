@@ -49,10 +49,12 @@
             <div class="flex items-center justify-end w-1/2">
                 @auth
                     <div class="flex items-center">
-                        <button id="action-dropdown" data-dropdown-toggle="dropdown"
-                            class="text-midnight-blue bg-white hover:bg-white/80 focus:ring-4 focus:outline-none focus:ring-white/30 font-bold text-sm rounded-lg py-2.5 text-center inline-flex items-center transition-all duration-300 outline-none"
-                            type="button">Welcome, {{ auth()->user()->full_name }}! <svg class="w-2.5 h-2.5 ms-3"
-                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <button id="navbar-button-login" data-dropdown-toggle="dropdown"
+                            class="inline-flex items-center px-3 py-2 text-sm font-bold text-center text-white transition-all duration-300 rounded-lg outline-none bg-dodger-blue"
+                            type="button">Welcome<span class="hidden lg:inline-block">,
+                                {{ auth()->user()->full_name }}</span>!
+                            <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="m1 1 4 4 4-4" />
                             </svg>
@@ -60,7 +62,7 @@
 
                         {{-- Dropdown menu --}}
                         <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
-                            <ul class="py-2 text-sm text-gray-700" aria-labelledby="action-dropdown">
+                            <ul class="py-2 text-sm text-midnight-blue" aria-labelledby="navbar-button-login">
                                 <li>
                                     <a href="/dashboard" class="block px-4 py-2 hover:bg-gray-100">Dashboard</a>
                                 </li>

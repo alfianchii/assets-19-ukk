@@ -19,7 +19,7 @@
                     <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
                         <li class="inline-flex items-center">
                             <a href="/"
-                                class="inline-flex items-center text-sm font-medium text-gray-700 transition-all duration-300 hover:text-blue-600">
+                                class="inline-flex items-center text-sm font-medium transition-all duration-300 text-midnight-blue hover:text-dodger-blue">
                                 <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                     fill="currentColor" viewBox="0 0 20 20">
                                     <path
@@ -103,7 +103,7 @@
                     <div class="mb-5">
                         <label for="username" class="block mb-2 text-sm font-bold text-midnight-blue">Username</label>
                         <input type="text" id="username"
-                            class="bg-gray-50 border border-gray-300 text-slate-grey text-sm rounded-md transition-all duration-300 outline-none focus:ring-royal-blue focus:border-royalring-royal-blue block w-full p-2.5"
+                            class="border border-pale-silver text-slate-grey text-sm rounded-md transition-all duration-300 outline-none focus:ring-royal-blue focus:border-royal-blue ring-royal-blue block w-full p-2.5"
                             placeholder="e.g. alfianchii" name="username" autofocus>
 
                         @error('username')
@@ -114,7 +114,7 @@
                         <label for="password" class="block mb-2 text-sm font-bold text-midnight-blue">Your
                             password</label>
                         <input type="password" id="password" placeholder="e.g. 4kuBu7uhM3dk1t"
-                            class="bg-gray-50 border border-gray-300 text-slate-grey text-sm rounded-md transition-all duration-300 outline-none focus:ring-royal-blue focus:border-royalring-royal-blue block w-full p-2.5"
+                            class="border border-pale-silver text-slate-grey text-sm rounded-md transition-all duration-300 outline-none focus:ring-royal-blue focus:border-royal-blue ring-royal-blue block w-full p-2.5"
                             name="password">
 
                         @error('password')
