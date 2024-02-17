@@ -184,6 +184,60 @@
                         </div>
                     </div>
                 </div>
+                <div>
+                    <div class="flex flex-col justify-center mt-10 lg:justify-start lg:flex-row">
+                        <div
+                            class="flex items-center justify-center flex-shrink-0 transition-all rounded-lg lg:w-16 lg:h-16">
+                            @if (auth()?->user()?->profile_photo)
+                                <img width="60" class="rounded-full"
+                                    src="{{ asset('storage/' . auth()->user()->profile_picture) }}" alt="User Avatar" />
+                            @else
+                                <img width="60" class="rounded-full"
+                                    src="{{ asset('mazer/assets/compiled/jpg/1.jpg') }}" alt="User Avatar" />
+                            @endif
+                        </div>
+                        <div class="mt-6 lg:mt-0 lg:ml-6">
+                            <h3
+                                class="mb-2 text-base font-semibold text-center transition-all duration-300 lg:text-start text-midnight-blue hover:text-midnight-blue/60">
+                                Moepoi</h3>
+                            <p class="text-sm text-slate-grey">{{ now()->diffForHumans() }}</p>
+
+                            <p class="mt-5 text-slate-grey">While "Dompet Ayah Sepatu Ibu" promises an intriguing
+                                exploration of time and eternity, its execution falls short. The plot is convoluted, with
+                                too many characters and subplots vying for attention. The philosophical musings feel forced
+                                at times, detracting from the overall coherence of the narrative. Despite moments of
+                                brilliance, the book ultimately fails to deliver a satisfying resolution to its central
+                                mysteries.</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex flex-col justify-center mt-10 lg:justify-start lg:flex-row">
+                        <div
+                            class="flex items-center justify-center flex-shrink-0 transition-all rounded-lg lg:w-16 lg:h-16">
+                            @if (auth()?->user()?->profile_photo)
+                                <img width="60" class="rounded-full"
+                                    src="{{ asset('storage/' . auth()->user()->profile_picture) }}" alt="User Avatar" />
+                            @else
+                                <img width="60" class="rounded-full"
+                                    src="{{ asset('mazer/assets/compiled/jpg/1.jpg') }}" alt="User Avatar" />
+                            @endif
+                        </div>
+                        <div class="mt-6 lg:mt-0 lg:ml-6">
+                            <h3
+                                class="mb-2 text-base font-semibold text-center transition-all duration-300 lg:text-start text-midnight-blue hover:text-midnight-blue/60">
+                                Ogi</h3>
+                            <p class="text-sm text-slate-grey">{{ now()->diffForHumans() }}</p>
+
+                            <p class="mt-5 text-slate-grey">Prepare to have your mind blown by "Dompet Ayah Sepatu Ibu".
+                                This book seamlessly blends elements of science fiction, fantasy, and metaphysics to create
+                                a truly unique reading experience. The author's imagination knows no bounds, crafting a
+                                world where time is fluid and reality is mutable. With its vivid imagery and captivating
+                                storytelling, this book will leave you pondering the nature of existence long after you've
+                                turned the final page.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

@@ -3,7 +3,7 @@
 @section('title', $title)
 
 @section('additional_links')
-    @include('utils.fontawesome.link')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 @endsection
 
 @section('content')
@@ -176,7 +176,7 @@
                                 <div
                                     class="flex items-center justify-between w-full px-4 mt-8 lg:w-3/12 lg:border-l lg:border-dark/5 lg:ml-auto lg:py-10 lg:text-center lg:block lg:mt-0">
                                     <div class="text-2xl font-semibold">
-                                        <span class="text-red-500 select-all fa-fw fas"></span>
+                                        <i class="text-red-500 bi bi-heart-fill"></i>
                                     </div>
                                     <a class="inline-flex items-center justify-center h-10 px-4 py-3 font-medium text-center transition-colors duration-300 border-2 border-transparent rounded-md disabled:pointer-events-none disabled:opacity-80 bg-dodger-blue/10 text-dodger-blue hover:bg-dodger-blue/20 lg:mt-4"
                                         href="/books/1">See Detail</a>
@@ -271,7 +271,7 @@
                                 <div
                                     class="flex items-center justify-between w-full px-4 mt-8 lg:w-3/12 lg:border-l lg:border-dark/5 lg:ml-auto lg:py-10 lg:text-center lg:block lg:mt-0">
                                     <div class="text-2xl font-semibold">
-                                        <span class="text-red-500 select-all fa-fw fas"></span>
+                                        <i class="text-red-500 bi bi-heart-fill"></i>
                                     </div>
                                     <a class="inline-flex items-center justify-center h-10 px-4 py-3 font-medium text-center transition-colors duration-300 border-2 border-transparent rounded-md disabled:pointer-events-none disabled:opacity-80 bg-dodger-blue/10 text-dodger-blue hover:bg-dodger-blue/20 lg:mt-4"
                                         href="/books/2">See Detail</a>
@@ -371,7 +371,7 @@
                                 <div
                                     class="flex items-center justify-between w-full px-4 mt-8 lg:w-3/12 lg:border-l lg:border-dark/5 lg:ml-auto lg:py-10 lg:text-center lg:block lg:mt-0">
                                     <div class="text-2xl font-semibold">
-                                        <span class="text-red-500 select-all fa-fw fas"></span>
+                                        <i class="text-red-500 bi bi-heart"></i>
                                     </div>
                                     <a class="inline-flex items-center justify-center h-10 px-4 py-3 font-medium text-center transition-colors duration-300 border-2 border-transparent rounded-md disabled:pointer-events-none disabled:opacity-80 bg-dodger-blue/10 text-dodger-blue hover:bg-dodger-blue/20 lg:mt-4"
                                         href="/books/3">See Detail</a>
@@ -479,7 +479,7 @@
                                 <div
                                     class="flex items-center justify-between w-full px-4 mt-8 lg:w-3/12 lg:border-l lg:border-dark/5 lg:ml-auto lg:py-10 lg:text-center lg:block lg:mt-0">
                                     <div class="text-2xl font-semibold">
-                                        <span class="text-red-500 select-all fa-fw fas"></span>
+                                        <i class="text-red-500 bi bi-heart-fill"></i>
                                     </div>
                                     <a class="inline-flex items-center justify-center h-10 px-4 py-3 font-medium text-center transition-colors duration-300 border-2 border-transparent rounded-md disabled:pointer-events-none disabled:opacity-80 bg-dodger-blue/10 text-dodger-blue hover:bg-dodger-blue/20 lg:mt-4"
                                         href="/books/4">See Detail</a>
