@@ -40,7 +40,7 @@
                         <div class="mb-1 col-12">
                             <div class="form-group mandatory is-invalid">
                                 <div class="position-relative">
-                                    <label class="form-label">Review</label>
+                                    <label for="body" class="form-label">Review</label>
 
                                     <input id="body" name="body" value="{{ old('body') }}" type="hidden">
                                     <div id="editor">
@@ -59,7 +59,7 @@
                         <div class="mb-3 col-12">
                             <div class="form-group">
                                 <div class="position-relative">
-                                    <label id="photo" class="form-label text-danger">Photo</label>
+                                    <label for="photo" class="form-label text-danger">Photo</label>
 
                                     <input type="file" class="image-preview-filepond" name="photo" id="photo" />
                                 </div>

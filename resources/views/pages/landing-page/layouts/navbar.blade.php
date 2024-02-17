@@ -46,9 +46,9 @@
                 </div>
             </div>
 
-            <div class="flex items-center justify-end w-1/2">
+            <div class="flex items-center justify-end w-1/2 md:inline-block md:max-w-fit">
                 @auth
-                    <div class="flex items-center">
+                    <div class="flex items-center justify-end">
                         <button id="navbar-button-login" data-dropdown-toggle="dropdown"
                             class="inline-flex items-center px-3 py-2 text-sm font-bold text-center text-white transition-all duration-300 rounded-lg outline-none bg-dodger-blue"
                             type="button">Welcome<span class="hidden lg:inline-block">,

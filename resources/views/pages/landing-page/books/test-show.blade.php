@@ -3,7 +3,6 @@
 @section('title', $title)
 
 @section('additional_links')
-    @include('utils.fontawesome.link')
 @endsection
 
 @section('content')
@@ -21,6 +20,17 @@
                     Home
                 </a>
             </li>
+            <li class="inline-flex items-center">
+                <a href="/"
+                    class="inline-flex items-center text-sm font-medium transition-all duration-300 text-midnight-blue hover:text-dodger-blue">
+                    <svg class="w-3 h-3 mx-1 text-gray-400 rtl:rotate-180" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m1 9 4-4-4-4" />
+                    </svg>
+                    <span class="ms-1 md:ms-2">Books</span>
+                </a>
+            </li>
             <li aria-current="page">
                 <div class="flex items-center">
                     <svg class="w-3 h-3 mx-1 text-gray-400 rtl:rotate-180" aria-hidden="true"
@@ -28,7 +38,8 @@
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="m1 9 4-4-4-4" />
                     </svg>
-                    <span class="text-sm font-medium text-slate-grey ms-1 md:ms-2">Books</span>
+                    <span class="text-sm font-medium text-slate-grey ms-1 md:ms-2 line-clamp-1">Dompet Ayah Sepatu
+                        Ibu</span>
                 </div>
             </li>
         </ol>
@@ -37,7 +48,8 @@
     {{-- Content --}}
     <section class="pt-10">
         <div class="flex flex-col w-full md:w-10/12 lg:w-8/12">
-            <h2 class="mt-5 text-3xl font-semibold tracking-wide lg:text-5xl text-midnight-blue">📚• Books</h2>
+            <h2 class="mt-5 text-3xl font-semibold tracking-wide lg:text-5xl text-midnight-blue">📚• Dompet Ayah Sepatu Ibu
+            </h2>
             <p class="mt-3 leading-loose text-slate-grey"><span class="text-dodger-blue">Books</span> open doors
                 to <span class="text-dodger-blue">new
                     worlds</span>, ideas, and perspectives. They
@@ -92,8 +104,7 @@
 
             <div class="flex flex-col gap-y-10">
                 {{-- Dompet Ayah Sepatu Ibu --}}
-                <div
-                    class="p-6 transition-colors border-t-2 shadow-2xl bg-white/60 hover:bg-white rounded-xl shadow-dodger-blue/20 border-t-dodger-blue">
+                <div class="p-6 transition-colors shadow-2xl bg-white/60 hover:bg-white rounded-xl shadow-primary/20">
                     <div class="flex flex-wrap items-start -mx-4 lg:items-center">
                         <div class="flex-shrink-0 w-full px-4 mb-6 md:w-5/12 lg:w-3/12 md:mb-0">
                             <a class="relative inline-block w-full" href="/books/1">
@@ -175,9 +186,7 @@
                                 </div>
                                 <div
                                     class="flex items-center justify-between w-full px-4 mt-8 lg:w-3/12 lg:border-l lg:border-dark/5 lg:ml-auto lg:py-10 lg:text-center lg:block lg:mt-0">
-                                    <div class="text-2xl font-semibold">
-                                        <span class="text-red-500 select-all fa-fw fas"></span>
-                                    </div>
+                                    <div class="text-2xl font-semibold">Free</div>
                                     <a class="inline-flex items-center justify-center h-10 px-4 py-3 font-medium text-center transition-colors duration-300 border-2 border-transparent rounded-md disabled:pointer-events-none disabled:opacity-80 bg-dodger-blue/10 text-dodger-blue hover:bg-dodger-blue/20 lg:mt-4"
                                         href="/books/1">See Detail</a>
                                 </div>
@@ -186,8 +195,7 @@
                     </div>
                 </div>
                 {{-- Laut Bercerita --}}
-                <div
-                    class="p-6 transition-colors border-t-2 shadow-2xl bg-white/60 hover:bg-white rounded-xl shadow-dodger-blue/20 border-t-dodger-blue">
+                <div class="p-6 transition-colors shadow-2xl bg-white/60 hover:bg-white rounded-xl shadow-primary/20">
                     <div class="flex flex-wrap items-start -mx-4 lg:items-center">
                         <div class="flex-shrink-0 w-full px-4 mb-6 md:w-5/12 lg:w-3/12 md:mb-0">
                             <a class="relative inline-block w-full" href="/books/2">
@@ -270,9 +278,7 @@
                                 </div>
                                 <div
                                     class="flex items-center justify-between w-full px-4 mt-8 lg:w-3/12 lg:border-l lg:border-dark/5 lg:ml-auto lg:py-10 lg:text-center lg:block lg:mt-0">
-                                    <div class="text-2xl font-semibold">
-                                        <span class="text-red-500 select-all fa-fw fas"></span>
-                                    </div>
+                                    <div class="text-2xl font-semibold">Free</div>
                                     <a class="inline-flex items-center justify-center h-10 px-4 py-3 font-medium text-center transition-colors duration-300 border-2 border-transparent rounded-md disabled:pointer-events-none disabled:opacity-80 bg-dodger-blue/10 text-dodger-blue hover:bg-dodger-blue/20 lg:mt-4"
                                         href="/books/2">See Detail</a>
                                 </div>
@@ -281,8 +287,7 @@
                     </div>
                 </div>
                 {{-- The Visual MBA --}}
-                <div
-                    class="p-6 transition-colors border-t-2 shadow-2xl bg-white/60 hover:bg-white rounded-xl shadow-dodger-blue/20 border-t-dodger-blue">
+                <div class="p-6 transition-colors shadow-2xl bg-white/60 hover:bg-white rounded-xl shadow-primary/20">
                     <div class="flex flex-wrap items-start -mx-4 lg:items-center">
                         <div class="flex-shrink-0 w-full px-4 mb-6 md:w-5/12 lg:w-3/12 md:mb-0">
                             <a class="relative inline-block w-full" href="/books/3">
@@ -370,9 +375,7 @@
                                 </div>
                                 <div
                                     class="flex items-center justify-between w-full px-4 mt-8 lg:w-3/12 lg:border-l lg:border-dark/5 lg:ml-auto lg:py-10 lg:text-center lg:block lg:mt-0">
-                                    <div class="text-2xl font-semibold">
-                                        <span class="text-red-500 select-all fa-fw fas"></span>
-                                    </div>
+                                    <div class="text-2xl font-semibold">Free</div>
                                     <a class="inline-flex items-center justify-center h-10 px-4 py-3 font-medium text-center transition-colors duration-300 border-2 border-transparent rounded-md disabled:pointer-events-none disabled:opacity-80 bg-dodger-blue/10 text-dodger-blue hover:bg-dodger-blue/20 lg:mt-4"
                                         href="/books/3">See Detail</a>
                                 </div>
@@ -381,8 +384,7 @@
                     </div>
                 </div>
                 {{-- Talking to Strangers --}}
-                <div
-                    class="p-6 transition-colors border-t-2 shadow-2xl bg-white/60 hover:bg-white rounded-xl shadow-dodger-blue/20 border-t-dodger-blue">
+                <div class="p-6 transition-colors shadow-2xl bg-white/60 hover:bg-white rounded-xl shadow-primary/20">
                     <div class="flex flex-wrap items-start -mx-4 lg:items-center">
                         <div class="flex-shrink-0 w-full px-4 mb-6 md:w-5/12 lg:w-3/12 md:mb-0">
                             <a class="relative inline-block w-full" href="/books/4">
@@ -478,9 +480,7 @@
                                 </div>
                                 <div
                                     class="flex items-center justify-between w-full px-4 mt-8 lg:w-3/12 lg:border-l lg:border-dark/5 lg:ml-auto lg:py-10 lg:text-center lg:block lg:mt-0">
-                                    <div class="text-2xl font-semibold">
-                                        <span class="text-red-500 select-all fa-fw fas"></span>
-                                    </div>
+                                    <div class="text-2xl font-semibold">Free</div>
                                     <a class="inline-flex items-center justify-center h-10 px-4 py-3 font-medium text-center transition-colors duration-300 border-2 border-transparent rounded-md disabled:pointer-events-none disabled:opacity-80 bg-dodger-blue/10 text-dodger-blue hover:bg-dodger-blue/20 lg:mt-4"
                                         href="/books/4">See Detail</a>
                                 </div>
@@ -490,12 +490,6 @@
                 </div>
             </div>
         </section>
-
-        <div class="row">
-            <div class="col d-flex justify-content-center" id="pagin-links">
-                {{-- Pagination --}}
-            </div>
-        </div>
     </section>
 @endsection
 
